@@ -1,0 +1,31 @@
+/**
+ * icon 图片汇总
+ * @author:zhulin;
+ * @date: 2013-4-3;
+ */
+/** ==Global layout ==**/
+/*@logo and login 
+----------------------------------------------------*/
+.dict_icon_logo {
+    background: url('icon/logo.png') no-repeat;
+}
+
+.dict_icon_min:hover {
+    background-position: -83px 0;
+}
+
+.dict_icon_feedback {
+    background-position: -188px 0;
+}
+
+.dict_icon_feedback:hover {
+    background-position: -167px 0;
+}
+
+.dict_icon_close {
+    background-position: -63px 0;
+}
+
+.dict_icon_close:hover {
+    background-position: -147px 0;
+}

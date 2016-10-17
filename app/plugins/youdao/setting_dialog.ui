@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>YoudaoSettingDialog</class>
+ <widget class="QDialog" name="YoudaoSettingDialog">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>470</width>
+    <height>460</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>470</width>
+    <height>460</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>470</width>
+    <height>460</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>软件设置</string>
+  </property>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>9</y>
+     <width>451</width>
+     <height>401</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="basicTab">
+       <attribute name="title">
+        <string>基本设置</string>
+       </attribute>
+       <widget class="QGroupBox" name="groupBox">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>415</width>
+          <height>101</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>启动</string>
+        </property>
+        <widget class="QWidget" name="verticalLayoutWidget_2">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>30</y>
+           <width>401</width>
+           <height>56</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QCheckBox" name="bootStartCheck">
+            <property name="text">
+             <string>开机时自动启动</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="startMinCheck">
+            <property name="text">
+             <string>启动后最小化到系统托盘</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_2">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>120</y>
+          <width>415</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>主窗口</string>
+        </property>
+        <widget class="QWidget" name="verticalLayoutWidget_4">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>30</y>
+           <width>401</width>
+           <height>56</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <widget class="QCheckBox" name="topMostCheck">
+            <property name="text">
+             <string>主窗口总在最上面</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="closeToTrayCheck">
+            <property name="text">
+             <string>窗口关闭时最小化到托盘</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="getwordTab">
+       <attribute name="title">
+        <string>取词划词</string>
+       </attribute>
+       <widget class="QCheckBox" name="ocrEnableCheckButton">
+        <property name="geometry">
+         <rect>
+          <x>8</x>
+          <y>10</y>
+          <width>421</width>
+          <height>24</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>启用屏幕取词</string>
+        </property>
+       </widget>
+       <widget class="QScrollArea" name="scrollArea">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>40</y>
+          <width>421</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="widgetResizable">
+         <bool>true</bool>
+        </property>
+        <widget class="QWidget" name="scrollAreaWidgetContents">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>419</width>
+           <height>69</height>
+          </rect>
+         </property>
+         <widget class="QLabel" name="label">
+          <property name="geometry">
+           <rect>
+            <x>6</x>
+            <y>8</y>
+            <width>64</width>
+            <height>24</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>取词方式</string>
+          </property>
+         </widget>
+         <widget class="QRadioButton" name="ocrRadio_0">
+          <property name="geometry">
+           <rect>
+            <x>70</x>
+            <y>8</y>
+            <width>91</width>
+            <height>24</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>鼠标取词</string>
+          </property>
+         </widget>
+         <widget class="QRadioButton" name="ocrRadio_3">
+          <property name="geometry">
+           <rect>
+            <x>160</x>
+            <y>8</y>
+            <width>121</width>
+            <height>24</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>鼠标中键取词</string>
+          </property>
+         </widget>
+         <widget class="QRadioButton" name="ocrRadio_4">
+          <property name="geometry">
+           <rect>
+            <x>280</x>
+            <y>8</y>
+            <width>114</width>
+            <height>24</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Alt+鼠标取词</string>
+          </property>
+         </widget>
+         <widget class="QRadioButton" name="ocrRadio_1">
+          <property name="geometry">
+           <rect>
+            <x>70</x>
+            <y>40</y>
+            <width>121</width>
+            <height>24</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Ctrl+鼠标取词</string>
+          </property>
+         </widget>
+         <widget class="QRadioButton" name="ocrRadio_2">
+          <property name="geometry">
+           <rect>
+            <x>280</x>
+            <y>40</y>
+            <width>131</width>
+            <height>24</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Shift+鼠标取词</string>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QCheckBox" name="strokeEnableCheckButton">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>140</y>
+          <width>421</width>
+          <height>24</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>启用划词释义</string>
+        </property>
+       </widget>
+       <widget class="QScrollArea" name="scrollArea_2">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>170</y>
+          <width>421</width>
+          <height>81</height>
+         </rect>
+        </property>
+        <property name="widgetResizable">
+         <bool>true</bool>
+        </property>
+        <widget class="QWidget" name="scrollAreaWidgetContents_2">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>419</width>
+           <height>79</height>
+          </rect>
+         </property>
+         <widget class="QLabel" name="label_2">
+          <property name="geometry">
+           <rect>
+            <x>6</x>
+            <y>10</y>
+            <width>64</width>
+            <height>24</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>展示方式</string>
+          </property>
+         </widget>
+         <widget class="QRadioButton" name="strokeRadio_0">
+          <property name="geometry">
+           <rect>
+            <x>70</x>
+            <y>10</y>
+            <width>131</width>
+            <height>24</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>展示划词图标</string>
+          </property>
+         </widget>
+         <widget class="QRadioButton" name="strokeRadio_1">
+          <property name="geometry">
+           <rect>
+            <x>240</x>
+            <y>10</y>
+            <width>131</width>
+            <height>24</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>直接展示结果</string>
+          </property>
+         </widget>
+         <widget class="QRadioButton" name="strokeRadio_2">
+          <property name="geometry">
+           <rect>
+            <x>70</x>
+            <y>40</y>
+            <width>161</width>
+            <height>24</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>双击Ctrl后展示结果</string>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QPushButton" name="cancelButton">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>420</y>
+     <width>95</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>取消</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="saveButton">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>420</y>
+     <width>95</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>保存设置</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

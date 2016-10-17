@@ -1,0 +1,158 @@
+/**
+ * User: yuanzhen
+ * Date: 13-3-26
+ */
+/*@rollbar
+-------------------------------------*/
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background: #e1e1e1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+    height: 15px;
+    width: 13px;
+    display: block;
+    background: #e1e1e1;
+}
+
+::-webkit-scrollbar-track-piece:vertical {
+    background-color: #e1e1e1;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    height: 50px;
+    background: #bbb;
+    border-radius: 10px;
+    outline: 3px solid #e1e1e1;
+    outline-offset: -3px;
+}
+
+::-webkit-scrollbar-thumb:vertical:active {
+    background: #969696;
+}
+
+/*@component rollbar btn
+------------------------------------------*/
+::-webkit-scrollbar-button:vertical:decrement {
+    background: url('icon/scroll-up.png') no-repeat 0 4px;
+}
+
+::-webkit-scrollbar-button:vertical:increment {
+    background: url('icon/scroll-down.png') no-repeat 0 4px;
+}
+
+::-webkit-scrollbar-button:vertical:decrement:active {
+    background: url('icon/scroll-up.png') no-repeat 0 4px;
+}
+
+::-webkit-scrollbar-button:vertical:increment:active {
+    background: url('icon/scroll-down.png') no-repeat 0 4px;
+}
+
+/*General setting*/
+body {
+    overflow: hidden;
+    -webkit-user-select: none;
+}
+
+.user-selected {
+    -webkit-user-select: text;
+}
+
+.control-height {
+    overflow-y: auto;
+}
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.clearfix:before, .clearfix:after {
+    display: block;
+    line-height: 0;
+    content: "";
+    clear: both;
+}
+
+header.global-nav-bar {
+    width: 100%;
+    background: #279aec;
+    height: 31px;
+    color: #fff;
+    font-size: 16px;
+    font-family: "WenQuanYi Micro Hei", "Source Han Sans SC Normal", Tahoma, Arial;
+    font-weight: 200;
+    position: fixed;
+    z-index: 1000;
+}
+
+/*========.nav-collapse begin=========*/
+header.global-nav-bar li, header.global-nav-bar li {
+    color: #fff;
+    display: inline-block;
+    text-shadow: #000 1px 1px 2px;
+    float: left;
+    padding: 15px 30px 15px 30px;
+    cursor: pointer;
+}
+
+header.global-nav-bar .brand {
+    margin-left: 10px;
+    display: block;
+    float: left;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 31px;
+}
+
+header .username {
+    display: none;
+    width: 70px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: default;
+}
+
+header.global-nav-bar .nav-collapse {
+    height: 31px;
+    margin-right: 11px;
+    overflow: hidden;
+}
+
+.global-nav-bar .nav.pull-left {
+    position: relative;
+    left: 0;
+    display: block;
+    float: left;
+    margin: 0 10px 0 0;
+}
+
+.nav-collapse .nav>li:hover {
+    color: #47CAFA;
+    text-shadow: #000 1px 1px 2px;
+}
+
+.global-nav-bar .nav.pull-right {
+    float: right;
+    margin-right: 0;
+}
+
+iframe {
+    border: none;
+    height: 100%;
+    margin-top: 31px;
+    position: absolute;
+    width: 100%;
+}
+
+.testOnline {
+    display: none;
+}

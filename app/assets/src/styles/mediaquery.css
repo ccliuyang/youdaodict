@@ -1,0 +1,30 @@
+/*监控宽度变化改变信息流及广告样式*/
+@media (min-width: 656px) {
+    .start-content{
+        width: 650px;
+        margin: 0 auto;
+    }
+
+    .small-hidden{
+        display: inline-block;
+    }
+    .ads{
+        position:relative;
+    }
+}
+@media  (max-width: 655px) {
+    .start-content{
+        width: 100%;
+    }
+
+    .small-hidden{
+        display: none;
+    }
+
+    .sentence-more{
+        display: none;
+    }
+    .ads{
+        position:static;
+    }
+}

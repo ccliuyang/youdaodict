@@ -1,0 +1,27 @@
+/**
+ * icon 样式汇总
+ * @author:zhulin;
+ * @date: 2013-4-3;
+ */
+/** ==Global layout ==**/
+/*@logo and login 
+----------------------------------------------------*/
+.dict_icon_logo {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    margin: 0 5px -7px 0;
+}
+
+.dict_icon_menu {
+    background: url('icon/close.png') no-repeat;
+    display: inline-block;
+    height: 16px;
+    margin: 7px 8px 8px 0;
+    overflow: hidden;
+    width: 16px;
+}
+
+.dict_icon_menu:last-child {
+    margin-right: 0;
+}

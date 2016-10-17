@@ -1,0 +1,50 @@
+/**
+ * @component suggest基础样式 & 历史列表 & 下拉菜单共用
+ */
+.auto-suggest li ,.history ul li,.select-mod li, .select-options li{
+    font-size: 13px;
+    list-style: none;
+    cursor: pointer;
+    border-bottom: 1px solid #e7f2f7;
+    line-height: 25px;
+    padding: 0 6px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: relative;
+}
+.auto-suggest, .history,.select-mod,.select-options{
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    background:#FFF;
+    z-index:10000;
+    overflow: hidden;
+    border: 2px solid rgba(9, 163, 251, .9);
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2);
+}
+.auto-suggest .selected,.history .selected, .select-mod .selected{
+    background: #d1e9fe;
+}
+.history .del{
+    display: none;
+}
+.history .selected .del{
+    display: inline-block;
+}
+/**
+ * @component 历史记录 单独的样式
+ */
+.history{
+    position: absolute;
+}
+.history ul{
+    position: relative;
+}
+.history .control{
+    position: relative;
+    padding: 0 6px;
+}
+.history ul li{
+    padding-right: 10px;
+}

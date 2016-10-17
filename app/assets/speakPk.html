@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="spoken-pk">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="src/styles/reset.css">
+    <link rel="stylesheet" href="src/styles/base.css">
+    <link rel="stylesheet" href="src/styles/bg.css">
+    <link rel="stylesheet" href="src/styles/icon.css">
+    <link rel="stylesheet" href="src/styles/global_layout.css">
+    <link rel="stylesheet" href="src/styles/spokenpk.css">
+    <link rel="stylesheet" href="src/styles/dict.css">
+</head>
+<body>
+<header class="global-nav-bar">
+    <span class="brand">
+        <span class="dict_icon_logo" id="logo"></span>有道词典-明星口语大PK
+    </span>
+
+    <div class="nav-collapse">
+        <div class="nav pull-right">
+            <a id="cpp_min" class="js-stop-captionMouseDown dict_icon_min" href="#"></a>
+            <a id="cpp_close" class="js-stop-captionMouseDown dict_icon_close" href="#"></a>
+        </div>
+    </div>
+</header>
+<section class="global-section">
+    <a id="goBackBegin" class="js-ctlog" href="#"  data-from="spokenpkresult" data-ctype="return" role="stop_dict_audio_js">返回</a>
+    <div class="" id="spokenPkBegin">
+        <div class="spread-pic">
+            <img src="src/styles/icon/spokenPk/top-bg.jpg" alt="明星大PK"/>
+        </div>
+        <div class="spread-content">
+            <a id="pre" role="stop_dict_audio_js" class="js-ctlog" data-from="spokenpkindex" data-ctype="pre">前一个</a>
+            <div id="spokenPkContainer" class=""></div>
+            <a id="next" role="stop_dict_audio_js" class="js-ctlog" data-from="spokenpkindex" data-ctype="next">后一个</a>
+        </div>
+        <div class="try-it">
+            <a id="begin_pk" class="js-ctlog" data-from="spokenpkindex" data-ctype="beginPk" role="stop_dict_audio_js">开始pk</a>
+            <a id="reload" class="js-ctlog" data-from="spokenpkindex" data-ctype="reloadPk" role="stop_dict_audio_js">reload</a>
+        </div>
+        <p class="info">听明星发音, PK英语口语</p> 
+    </div>
+    <div class="" id="spokenPkResult"></div>
+</section>
+<script type="text/javascript" data-main="/src/scripts/render/dict/spokenPk/spokenPk" src="dist/business-min.js"></script>
+
+</body>
+</html>

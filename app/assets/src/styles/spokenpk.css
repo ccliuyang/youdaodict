@@ -1,0 +1,167 @@
+.spoken-pk header.global-nav-bar {
+    height: 30px;
+    position: static;
+    font-size: 15px;
+}
+
+.spoken-pk .dict_icon_logo {
+    background: url('./icon/mini-logo.png') no-repeat;
+}
+
+.spoken-pk .global-section {
+    position: static;
+    background: url('./icon/spokenPk/result_top.png') no-repeat;
+}
+
+.spoken-pk header.global-nav-bar .brand {
+    line-height: 30px;
+}
+
+.spoken-pk .dict_icon_min,
+.spoken-pk .dict_icon_close {
+    overflow: visible;
+    margin-top: 6px;
+}
+
+.spread-pic {
+    width: 900px;
+    height: 280px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+}
+
+.spread-content {
+    height: 200px;
+    position: relative;
+}
+
+#pre, #next {
+    display: none;
+    position: absolute;
+    top: 70px;
+    background: #f2f2f2 url('./icon/spokenPk/spoken_pk_page.png');
+    width: 28px;
+    height: 0;
+    padding-top: 28px;
+    overflow: hidden;
+}
+
+#pre {
+    background-position: 0 0;
+    left: 10px;
+}
+
+#pre:hover {
+    background-position: 0 -28px;
+}
+
+#next {
+    background-position: -28px 0;
+    right: 10px;
+}
+
+#next:hover {
+    background-position: -28px -28px;
+}
+
+.try-it {
+    text-align: center;
+    height: 75px;
+    width: 291px;
+    margin: 0 auto;
+}
+
+.try-reload #begin_pk{
+    display: none;
+}
+
+.try-reload #reload{
+    display: inline-block;
+}   
+
+#begin_pk {
+    background: url('./icon/spokenPk/beginpk.png') no-repeat center 0;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    text-indent: -1000000px;
+}
+
+#begin_pk:hover {
+    background: url('./icon/spokenPk/beginpk_hover.png') no-repeat center 0;
+}
+
+#reload {
+    display: none;
+    background: url('./icon/spokenPk/reload_normal.png') no-repeat center 0;
+    width: 100%;
+    height: 100%;
+    text-indent: -1000000px;
+}
+
+#reload:hover{
+    background: url('./icon/spokenPk/reload_hover.png') no-repeat center 0;
+}
+
+#goBackBegin {
+    display: none;
+    background: url('./icon/spokenPk/goback.png') no-repeat;
+    width: 76px;
+    height: 0;
+    padding-top: 63px;
+    overflow: hidden;
+    margin-left: 44px;
+}
+
+#spokenPkBegin .info {
+    text-align: center;
+    font: 13px "microsoft Yahei";
+    color: #a6a6a6;
+}
+
+.star {
+    position: relative;
+}
+
+.star > span {
+    color: #999;
+    font-size: 14px;
+    font-family: "WenQuanYi Micro Hei", "Source Han Sans SC Normal", Tahoma, Arial;
+    display: block;
+}
+
+.star .voice {
+    position: absolute;
+    top: 132px;
+    right: 24px;
+    background: url('./icon/spokenPk/voice_normal.png');
+    display: inline-block;
+    width: 39px;
+    height: 0;
+    padding-top: 39px;
+    overflow: hidden;
+}
+
+.star .voice:hover {
+    background: url('./icon/spokenPk/voice_hover.png');
+}
+
+.spoken-pk .pk-begin #goBackBegin,
+.spoken-pk .pk-begin #spokenPkResult {
+    display: none;
+}
+
+.spoken-pk .pk-begin #spokenPkBegin {
+    display: block;
+}
+
+.spoken-pk .pk-result #goBackBegin,
+.spoken-pk .pk-result #spokenPkResult {
+    display: block;
+}
+
+.spoken-pk .pk-result #spokenPkBegin {
+    display: none;
+}
+
+

@@ -1,0 +1,205 @@
+/*Result area base*/
+/*
+author: zhulin
+date: 2013-3-21
+*/
+/*字体基准大小分为： 12px 14px 16px*/
+body {
+    overflow: hidden;
+    line-height: 2em;
+    background: #f2f2f2;
+    font-family: "WenQuanYi Micro Hei", "Source Han Sans SC Normal", Tahoma, Arial;
+}
+
+/**/
+.core {
+    font-size: 15px;
+    color: rgb(78, 76, 74);
+}
+
+/*辅助性内容，包括次要内容，小标题，说明，范例，状态*/
+.secondary {
+    font-size: 1em;
+    color: rgb(160, 160, 160);
+}
+
+/*强调内容，释义词汇等*/
+.emphasis, b {
+    color: rgb(99, 140, 11);
+    font-weight: normal;
+}
+
+/*可点击的内容，链接等*/
+.clickable, .clickable:visited, .clickable:hover, .clickable:active {
+    color: #35a1d4;
+    cursor: pointer;
+}
+
+/*仅从颜色上来标识内容的辅助层次*/
+.grey {
+    color: rgb(182, 175, 162);
+}
+
+/*仅从font-family标识内容的辅助层次*/
+.secondaryFont {
+    font-size: 13px;
+}
+
+/*序号类型的标识， 常见于 词性（adj, n）*/
+.serial {
+    margin-right: 0.33em;
+}
+
+/*数据来源*/
+.source {
+    padding-top: 0.7em;
+    text-align: right;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* @group 多列布局 */
+.cols-layout {
+    display: flex;
+    display: -webkit-flex;
+}
+
+.cols-layout .col1 {
+    order: 1;
+}
+
+/* 第二列采用自动宽度 */
+.cols-layout .col2 {
+    flex: auto;
+    -webkit-flex: auto;
+    order: 2;
+    -webkit-order: 2;
+}
+
+.cols-layout .col3 {
+    order: 3;
+    -webkit-order: 3;
+}
+
+/*@临时存放！ 基本释义*8 公共样式
+===================================================================*/
+/*@componet 查词得到的结果词样式
+-------------------------------*/
+.keyword {
+    /*margin: 0 1.5em 0 0;*/
+}
+
+.trans-container h2 {
+    font-size: 1.16em;
+}
+
+.trans-container h4 {
+    font-weight: bold;
+}
+
+.trans-container h4 small {
+    font-weight: normal;
+}
+
+/*@componet 单个样式 small标签 用于表示音标
+---------------------------------------------------------*/
+.trans-container small {
+    color: rgb(182, 175, 162);
+    font-size: 1em;
+}
+
+/* @componet 报错
+-----------------------------------------------------------*/
+.errorTip {
+    line-height: 1.5em;
+    color: #35a1d4;
+    font-size: 0.9em;
+    font-weight: normal;
+    margin-left: 1.2em;
+}
+
+.rptErrSucceed {
+    font-weight: normal;
+    margin-left: 10px;
+    vertical-align: top;
+    font-size: 12px;
+    color: #959595;
+    display: none;
+}
+
+/*@component 附加说明
+--------------------------------------------------*/
+.additional {
+    margin: 0.67em 0 0;
+    color: #a0a0a0;
+}
+
+/*@component  释义列表编号
+-----------------------------------------------------------*/
+.order {
+    margin-right: 1em;
+    width: 1.5em;
+    display: inline-block;
+    text-align: right;
+}
+
+/*@component 音标
+---------------------------------------------------------*/
+.pronounce .phonetic {
+    margin-left: 0.2em;
+}
+
+h2 .phonetic {
+    font-size: 0.85em;
+    font-family: "WenQuanYi Micro Hei", "Source Han Sans SC Normal", Tahoma, Arial;
+    font-weight: normal;
+    color: #666;
+}
+
+.baav {
+    margin-top: 5px;
+}
+
+/*@component 功能性css
+----------------------------------------------------------*/
+.yd_dict_toggleClose [role^="yd_collapse"] {
+    display: none;
+}
+
+/*@hand-writing module
+-----------------------------------------------------------*/
+#handWrite {
+    width: 348px;
+    height: 216px;
+    z-index: 1000;
+    border: 1px solid #bfbfc8;
+    position: absolute;
+}
+
+/*@确定 取消 btn*/
+.trans-container  .ensure, .trans-container  .cancel {
+    line-height: 2em;
+    text-align: center;
+    display: inline-block;
+    width: 60px;
+    height: 2em;
+    cursor: pointer;
+    background: #199EF3;
+    color: #fff;
+    font-family: "WenQuanYi Micro Hei", "Source Han Sans SC Normal", Tahoma, Arial;
+    border-radius: 1px;
+    font-size:12px;
+}
+
+.trans-container  .ensure {
+    margin-right: 48px;
+}
+
+.trans-container  a.ensure:hover, .trans-container .cancel:hover {
+    color: #8DC9E9;
+}
+
+.toggleClose .toggleContent {
+    display: none;
+}

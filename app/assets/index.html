@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html data-size="">
+<head>
+    <meta charset="UTF-8">
+    <title> 有道词典 </title>
+    <link rel="stylesheet" href="src/styles/reset.css">
+    <link rel="stylesheet" href="src/styles/base.css">
+    <link rel="stylesheet" href="src/styles/dict.css">
+    <link rel="stylesheet" href="src/styles/icon.css">
+    <link rel="stylesheet" href="src/styles/bg.css">
+    <link rel="stylesheet" href="src/styles/suggest.css">
+    <link rel="stylesheet" href="src/styles/global_layout.css">
+    <link rel="stylesheet" href="src/styles/index.css">
+    <link rel="stylesheet" href="src/styles/fanyi.css">
+    <link rel="stylesheet" href="src/styles/mediaquery.css">
+</head>
+<body>
+<header id="globalNavBar" class="global-nav-bar">
+    <span class="brand">
+        <span class="dict_icon_logo" id="logo"></span>
+        <span class="small-hidden">有道词典</span>
+    </span>
+
+    <div class="nav-collapse">
+        <ul class="nav pull-left" id="control">
+            <li class="current js-type js-stop-captionMouseDown" data-type="dict"><a href="javascript:;" class="js-click-tab">词典</a></li>
+            <li class="js-type js-stop-captionMouseDown" data-type="example"><a href="javascript:;" class="js-click-tab">例句</a></li>
+            <li class="js-type js-stop-captionMouseDown" data-type="baikeDetail"><a href="javascript:;" class="js-click-tab">百科</a></li>
+            <li class="js-type js-stop-captionMouseDown" data-type="trans"><a href="javascript:;" class="js-click-tab">翻译</a></li>
+        </ul>
+        <div class="nav pull-right">
+            <a id="cpp_app_mini" href="#" class="js-stop-captionMouseDown dict_icon_mini" title="迷你窗口">迷你窗口</a>
+            <a id="cpp_min" class="js-stop-captionMouseDown dict_icon_min" title="最小化窗口" href="#">min</a>
+            <a id="cpp_max" class="js-stop-captionMouseDown dict_icon_max" title="最大化窗口" href="#">max</a>
+            <a id="cpp_close" class="js-stop-captionMouseDown dict_icon_close" href="#">&times;</a>
+        </div>
+    </div>
+</header>
+
+<div class="combobox">
+    <form id="queryForm" class="global-nav-search nav clearfix">
+        <ul class="pager pull-left">
+            <li class="pre"><a title="前一条" href="#">前一条</a></li>
+            <li class="next"><a title="后一条"  href="#">后一条</a></li>
+        </ul>
+        <div class="select-lang pull-left lang-sel-open" id="langSel">
+            <a class="dict-icon-lang" title="点击选择语言" id="customSelectVal" href="#">汉英互译</a>
+            <span class="dict-icon-lang-short" href="#"></span>
+            <ul class="js-lang-type select-options" id="langOpts" data-lang="eng">
+                <li><a id="cpp_lang_eng" href="#" class="le-eng js-lang" data-lang="eng"><span class="bar"></span>汉英互译</a>
+                </li>
+                <li><a id="cpp_lang_fr" href="#" class="le-fr js-lang" data-lang="fr"><span class="bar"></span>汉法互译</a></li>
+                <li><a id="cpp_lang_jap" href="#" class="le-jap js-lang" data-lang="jap"><span class="bar"></span>汉日互译</a>
+                </li>
+                <li><a id="cpp_lang_ko" href="#" class="le-ko js-lang" data-lang="ko"><span class="bar"></span>汉韩互译</a></li>
+            </ul>
+        </div>
+        <input type="button" id="searchIt" class="js-stop-captionMouseDown dict-icon-search pull-right" value="查询" title="查询词典">
+        <div class="input-wrap js-contextmenu-free">
+            <input type="text" id="queryinput" class="dict-icon-input search-text" placeholder="输入要查询的单词或词组">
+            <!--<a id="hwBtn" class="dict-icon-handwrite" title="打开手写板" href="#"></a>-->
+            <a class="dict-icon-search-down js-search-history" title="查词历史" href="#"></a>
+        </div>
+    </form>
+    <a target="_blank" class="go-to-search js-search-yd" title="网页搜索(ctrl+回车)">搜索</a>
+</div>
+
+<section class="global-section">
+    <div id="dict" class="start">
+        <div id="tab_dict" class="main-tab" style="display: block;">
+            <!-- 首页模块开始 -->
+            <div id="start" class="animated fadeInLeft">
+                <div id="startContent" class="go-top-start-sec">
+                    <div class="everyDayEnglish">
+                        <div class="startpage-type-word"></div>
+                    </div>
+                    <!-- 该层用于产生滚动条-->
+                    <div class="start-inner">
+                        <!-- 正式内容开始 -->
+
+                        <!-- 正式内容结束 -->
+                    </div>
+                    <div class="loading"><img src="./src/styles/icon/load.gif" alt=""/></div>
+                    <div class="no-more-data">都看完啦！ <a id="tryAgain" class="js-ctlog" data-ctype="refresh_index" href="javascript:void(0)"><span class="refresh-cards"></span>重新加载</a></div>
+                </div>
+                <a href="" class="go-top js-ctlog js-go-top js-go-start-top" data-ctype="gotop"></a>
+            </div>
+            <!-- 首页模块结束 -->
+            <div id="queryResult1">
+                <!--queryresult-->
+            </div>
+            <div id="quick">
+                <!--quick-->
+            </div>
+        </div>
+        <div id="tab_example" class="main-tab">
+            <div id="example" class="hideNavSide">
+                <aside class="result_navigator">
+                    <nav id="example_navigator" role="yd_collapse_dict_example_layout">
+                        <div class="example-aside-group" id="group_blng" data-example-group="blng">
+                            <h3 class="main-catalog">
+                                        <span class="lable nav-tip js-ctlog" data-ctype="双语"><a href="#" hidefocus="true"
+                                                                       data-role="main-catalog">双语例句</a></span>
+                            </h3>
+                            <ul class="sub-catalog group_1">
+                                <li class="sub_0_all js-ctlog" data-ctype="双语_全部" data-ljCont="0"><a href="#" hidefocus="true">全部</a></li>
+                                <li class="spoken js-ctlog" data-ctype="双语_口语" data-ljCont="1"><a href="#" hidefocus="true">口语</a></li>
+                                <li class="written js-ctlog" data-ctype="双语_书面语" data-ljCont="2"><a href="#" hidefocus="true">书面语</a></li>
+                                <li class="thesis js-ctlog" data-ctype="双语_论文" data-ljCont="3"><a href="#" hidefocus="true">论文</a></li>
+                            </ul>
+                        </div>
+                        <ins class="split"></ins>
+                        <div class="example-aside-group" id="group_mdia" data-example-group="mdia">
+                            <h3 class="main-catalog">
+                                        <span class="lable nav-tip js-ctlog" data-ctype="原声"><a href="#" hidefocus="true"
+                                                                       data-role="main-catalog">原声例句</a></span>
+                            </h3>
+                            <ul class="sub-catalog group_2">
+                                <li class="sub_1_all js-ctlog" data-ctype="原声_全部" data-ljCont="0"><a href="#" hidefocus="true">全部</a></li>
+                                <li class="music js-ctlog" data-ctype="原声_音频" data-ljCont="1"><a href="#" hidefocus="true">音频例句</a></li>
+                                <li class="video js-ctlog" data-ctype="原声_视频" data-ljCont="2"><a href="#" hidefocus="true">视频例句</a></li>
+                            </ul>
+                        </div>
+                        <ins class="split"></ins>
+                        <div class="example-aside-group" id="group_auth" data-example-group="auth">
+                            <h3 class="main-catalog">
+                                        <span class="lable js-ctlog" data-ctype="权威"><a href="#" hidefocus="true"
+                                                               data-role="main-catalog">权威例句</a></span>
+                            </h3>
+                        </div>
+                    </nav>
+                    <a class="nav-button js-ctlog" id="toggleNav" data-ctype="点击收起或展开例句导航" data-toggle="yd_collapse_dict_example_layout"
+                       href="javascript:void(0)"><span></span></a>
+                </aside>
+                <section id="example_nav_content" class="result-content user-selected control-height">
+                    <div id="example_lang_typos_group"></div>
+                    <div id="example_no_result"></div>
+                    <div id="example_sents_content"></div>
+                    <div id="example_offline"></div>
+                    <div id="ead_dictr_example_bottom">
+                        <!--adv-->
+                    </div>
+                </section>
+            </div>
+            <div id="example_welcome"></div>
+        </div>
+        <div id="tab_baikeDetail" class="main-tab">
+            <div id="baikeDetail" class="control-height user-selected">
+                <!--baikeDetail-->
+            </div>
+            <div id="baike_welcome"></div>
+            <div id="ead_dictr_wiki_bottom">
+                <!--adv-->
+            </div>
+        </div>
+        <div id="tab_trans" class="main-tab">
+            <div id="trans" class="translation">
+                <div id="translateWnd" class="container layout-horizontal">
+                    <span class="nav-button" id="toggleFanyiNav" data-toggle="yd_collapse_fanyi"><span></span></span>
+                    <div class="mod-switch-btns js-switch">
+                        <span class="ver-mod js-ver" title="左右对照"></span><span class="hor-mod js-hor" title="上下对照"></span>
+                    </div>
+                    <div class="original-mod mod">
+                        <h4>原文</h4>
+
+                        <div class="edit edit-mod user-selected" id="tranInput" contenteditable="true"></div>
+                        <!-- span标签之间请勿出现空隙 -->
+                        <div class="btn-group">
+                            <span class="button lang-option" id="langOption">自动检测</span><span
+                                class="button  strong-btn" title="自动翻译快捷键:CTRL+回车" id="tranButton">自动翻译</span><a
+                                class="button" target="_blank" title="人工翻译"
+                                href="http://f.youdao.com/?vendor=deskdict.hts.button&path=dict">人工翻译</a><span
+                                class="button js-cleanButton clear" title="清空" id="cleanButton">清空</span>
+                            <ul class="select-mod animated" id="langList">
+                                <li data-lang='AUTO'>自动检测……</li>
+                                <li data-lang='ZH_CN2EN'>汉→英</li>
+                                <li data-lang='EN2ZH_CN'>英→汉</li>
+                                <li data-lang='ZH_CN2JA'>汉→日</li>
+                                <li data-lang='JA2ZH_CN'>日→汉</li>
+                                <li data-lang='ZH_CN2KR'>汉→韩</li>
+                                <li data-lang='KR2ZH_CN'>韩→汉</li>
+                                <li data-lang='ZH_CN2FR'>汉→法</li>
+                                <li data-lang='FR2ZH_CN'>法→汉</li>
+                                <li data-lang='ZH_CN2RU'>汉→俄</li>
+                                <li data-lang='RU2ZH_CN'>俄→汉</li>
+                                <li data-lang='ZH_CN2SP'>汉→西</li>
+                                <li data-lang='SP2ZH_CN'>西→汉</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="column-border"></div>
+                    <!-- 翻译后该div添加 got-text  类 -->
+                    <div class="translation-mod mod">
+                        <h4>译文</h4>
+                        <div class="edit-mod user-selected" id="tranOutput">
+                            <div class="edit content " id="translateResult" contenteditable="true">
+                            </div>
+                            <div class="dict-result content" id="smartResult">
+                                <!-- <span>有道词典翻译结果</span><br />
+                               adj. 精密的；美好的；细微的；和蔼的<br />
+                               <a href="cmd:ds">更多释义</a>  -->
+                            </div>
+                            <div id="inProgress" class="in-progress">
+                                <div class="in-progress-pic"></div>
+                                <p>翻译中</p>
+                            </div>
+                            <div id="fanyiNetError" class="net-error">
+                                <div class="noconnetion-img">
+                                </div>
+                                <div class="noconnection-text">
+                                    <p>抱歉，离线模式下不能使用翻译功能，请检查您的网络连接或者代理设置</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-group">
+                            <span class="button" title="逐句对照" id="lineButton">逐句对照</span>
+                            <span class="button" title="复制译文" id="copyButton">复制译文</span>
+                            <span class="button" title="参考例句" id="simiButton">参考例句</span>
+                            <span id="Span1" title="清空" class="button js-cleanButton clear">清空</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="TransWebPage" class="web-page-tip">
+        <a class="close-web-page-tip"></a>
+    </div>
+</section>
+<footer class="global-setting">
+    <div class="menu pull-left">
+        <a class="active has-menu js-main-menu-btn dropdown-toggle dict-icon-start" data-toggle="dropdown" href="#"
+           title="开始菜单">开始</a>
+        <a id="cpp_app_pict" href="#" class="dict-icon-tujie" title="图解词典">图解词典</a>
+        <a id="cpp_app_study" href="#" class="dict-icon-xuetang" title="有道学堂">有道学堂</a>
+        <a id="cpp_app_zfanyi" href="#" class="dict-icon-fanyi" title="人工翻译">人工翻译，最快一分钟</a>
+        <a id="cpp_app_bbs" href="#" class="dict-icon-bbs" title="有道词典小组">有道词典小组</a>
+    </div>
+    <span id="howToSet" class="how-to-set">
+            <a class="close-how-to-set"></a>
+    </span>
+    <div class="offline" title="网络已断开"></div>
+    <p class="pull-right set-word">
+        <a id="cpp_screentrans"><span class="status"></span>取词</a><ins>|</ins><a id="cpp_stroketrans"><span
+            class="status"></span>划词</a>
+    </p>
+</footer>
+<ul class="main-menu shadow-box animated" id="mainMenu" tabindex="01" role="menu">
+    <li id="cpp_menu_topmost">
+        <span class="menu-icon topmost cur"></span>
+        <span class="menu-text">窗口总在最前</span>
+    </li>
+    <li id="cpp_menu_option" class="set-control">
+        <span class="menu-icon set"></span>
+        <span class="menu-text">软件设置</span>
+    </li>
+    <li id="font-size-control" class="font-size-control has-submenu">
+        <span class="menu-icon f-size"></span>
+        <span class="menu-text">字体大小</span>
+        <ul class="js-sub-menu shadow-box">
+            <li data-fz="16px">
+                <span class="menu-icon "></span>
+                <span class="menu-text">大</span>
+            </li>
+            <li data-fz="14px">
+                <span class="menu-icon cur-fz"></span>
+                <span class="menu-text">中</span>
+            </li>
+            <li data-fz="12px">
+                <span class="menu-icon "></span>
+                <span class="menu-text">小</span>
+            </li>
+        </ul>
+    </li>
+
+    <li id="help-control" class="help-control has-submenu">
+        <span class="menu-icon help"></span>
+        <span class="menu-text">帮助</span>
+        <ul class="js-sub-menu shadow-box">
+            <li><a target="_blank" href="http://cidian.youdao.com/help.jsp">
+                <span class="menu-icon help-online "></span>
+                <span class="menu-text">在线帮助</span>
+            </a></li>
+            <li><a id="cpp_menu_feedBack" target="_blank"  href="#">
+                <span class="menu-icon feedback"></span>
+                <span class="menu-text">意见反馈</span></a>
+            </li>
+            <li id="cpp_menu_about">
+                <span class="menu-icon about"></span>
+                <span class="menu-text">关于</span>
+            </li>
+        </ul>
+    </li>
+    <li id="cpp_menu_quit">
+        <span class="menu-icon exit"></span>
+        <span class="menu-text">退出</span>
+    </li>
+</ul>
+<div id="handWrite" class="pm" style="display:none">
+    <object width="346" height="216" type="application/x-shockwave-flash" id="hnw"
+            data="http://shared.ydstatic.com/dict/v5.13/swf/Hnw.swf">
+        <param name="movie" value="http://shared.ydstatic.com/dict/v5.13/swf/Hnw.swf">
+        <param name="menu" value="false">
+        <param name="allowScriptAccess" value="always">
+    </object>
+</div>
+<div id="history" class="history" style="display: none; top: 106px; left: 165px; width: 342px;"></div>
+<script type="text/javascript" data-main="/src/scripts/index" src="dist/business-min.js" async="true"></script>
+<!-- <script type="text/javascript" src="index.js" async="true"></script> -->
+</body>
+</html>

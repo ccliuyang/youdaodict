@@ -1,0 +1,543 @@
+/**
+ * icon 样式汇总
+ * @author:zhulin;
+ * @date: 2013-4-3;
+ */
+/** ==Global layout ==**/
+/*@logo and login
+----------------------------------------------------*/
+.dict_icon_logo {
+    display: inline-block;
+    width: 27px;
+    height: 27px;
+    margin-bottom: -8px;
+}
+
+.dict_icon_login {
+    display: inline-block;
+    overflow: hidden;
+    padding-top: 20px;
+    width: 20px;
+    height: 0;
+    margin: 0 46px -7px 6px;
+}
+
+.dict_icon_min, .dict_icon_max, .dict_icon_close, .dict_icon_mini {
+    display: inline-block;
+    overflow: hidden;
+    padding-top: 20px;
+    width: 20px;
+    height: 0;
+    margin: 0 0 -22px 0px;
+}
+
+.dict_icon_min {
+    margin: 7px 0 0 0;
+}
+
+.dict_icon_max {
+    margin: 11px 0 0 0;
+}
+
+.dict_icon_close {
+    margin: 10px 5px 0 0;
+}
+
+.dict_icon_mini {
+    margin: 11px 4px 0 0;
+}
+
+/*@Language select btn
+-------------------------------------------------------*/
+.dict-icon-lang-short, .js__baikeDetail .dict-icon-lang {
+    display: none;
+}
+
+.js__baikeDetail .dict-icon-lang-short, .dict-icon-lang {
+    display: inline-block;
+}
+
+.dict-icon-lang, .lang-eng {
+    display: inline-block;
+    width: 65px;
+    padding-top: 43px;
+    height: 0;
+    overflow: hidden;
+}
+
+.dict-icon-search {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    display: inline-block;
+    width: 75px;
+    padding-top: 43px;
+    height: 0;
+    text-indent: -9999px;
+}
+
+.js__trans .dict-icon-search,
+.js__example .dict-icon-search,
+.js__baikeDetail .dict-icon-search {
+    width: 95px;
+}
+
+/*.dict-icon-feedback {*/
+/*display: inline-block;*/
+/*width: 17px;*/
+/*height: 18px;*/
+/*margin: 0 3px -15px 0;*/
+/*}*/
+.dict-icon-handwrite {
+    position: absolute;
+    top: 14px;
+    right: 36px;
+    display: inline-block;
+    width: 18px;
+    height: 17px;
+}
+
+.dict-icon-search-down {
+    position: absolute;
+    top: 14px;
+    right: 6px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+
+}
+
+.set-word .status {
+    display: inline-block;
+    width: 15px;
+    height: 13px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+/*@component  单词本
+-------------------------------------------------------*/
+/*未添加*/
+.add-fav {
+    display: inline-block;
+    width: 16px;
+    height: 13px;
+    outline: none;
+}
+
+/*
+.ec .add-fav.hidden{
+    display: none;
+}*/
+/*@component 发音按钮
+---------------------------------------------------------*/
+.pronounce .dictvoice {
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    margin: 0 3px 0 4px;
+    vertical-align: middle;
+    font-size: 0;
+}
+
+/*@componet need help icon
+-------------------------------------------------------------*/
+.need-help {
+    display: inline-block;
+    margin-left: 2px;
+    width: 19px;
+    height: 13px;
+}
+
+/*@componet humanvoice
+-----------------------------------------------------------*/
+.humanvoice {
+    display: inline-block;
+    width: 15px;
+    height: 13px;
+    vertical-align: middle;
+}
+
+/*@componet devotion
+----------------------------------------------------------*/
+.devotion-ensure, .devotion-cancel {
+    display: inline-block;
+    width: 61px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.devotion-cancel {
+    margin-left: 10px;
+}
+
+.wordTrans {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+/*@component more expand or pack-up
+--------------------------------------------------------------*/
+.yd_icon_more {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+/*@component show-detail
+--------------------------------------------------------------*/
+.show-detail {
+    display: inline-block;
+    width: 8px;
+    height: 10px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+/*@component history
+-------------------------------------*/
+.history span {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.history span:not(.current) {
+    font-size: 0;
+}
+
+.history .del {
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    right: 3px;
+    top: 0px;
+}
+
+.history .control span:not(.current) {
+    width: 25px;
+    height: 25px;
+}
+
+.history .control .current {
+    background: none;
+}
+
+.history .control .current {
+    cursor: default;
+}
+
+.history .control span.clear {
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/*速查结果中的回车小按钮
+-----------------------------------*/
+.quick .enter-tips .enter-icon {
+    display: inline-block;
+    height: 20px;
+    width: 48px;
+    vertical-align: top;
+    margin-left: 10px;
+}
+
+/*关闭起始页头部广告*/
+.close-indexhead-ads {
+    display: inline-block;
+    width: 52px;
+    height: 0;
+    overflow: hidden;
+    padding-top: 14px;
+}
+
+.close-indexhead-ads:hover {
+    background-position: 0 -29px;
+}
+
+.card-like {
+    background: url('icon/watercard/zan.png') no-repeat;
+    display: inline-block;
+    width: 13px;
+    height: 0;
+    overflow: hidden;
+    padding-top: 12px;
+}
+
+.card-like:hover {
+    background: url('icon/watercard/zan-hover.png');
+}
+
+.water-card:hover .card-like {
+    background: url('icon/watercard/zan-hover.png');
+}
+
+.card-comment {
+    background: url('icon/watercard/argue.png') no-repeat;
+    display: inline-block;
+    width: 14px;
+    height: 0;
+    overflow: hidden;
+    padding-top: 10px;
+}
+
+.card-comment:hover {
+    background: url('icon/watercard/argue-hover.png');
+}
+
+.water-card:hover .card-comment {
+    background: url('icon/watercard/argue-hover.png');
+}
+
+.card-default {
+    background: url("icon/default.png");
+}
+
+/*利用层叠，先定义的优先级别低，没有的类别无法覆盖默认样式*/
+.text2 {
+    display: inline-block;
+    width: 40px;
+    height: 22px;
+    overflow: hidden;
+    background: url("icon/watercard/001.png");
+}
+
+.text3 {
+    display: inline-block;
+    width: 54px;
+    height: 22px;
+    overflow: hidden;
+    background: url("icon/watercard/002.png");
+}
+
+.text4 {
+    display: inline-block;
+    width: 69px;
+    height: 22px;
+    overflow: hidden;
+    background: url("icon/watercard/003.png");
+}
+
+.text5 {
+    display: inline-block;
+    width: 86px;
+    height: 22px;
+    overflow: hidden;
+    background: url("icon/watercard/004.png");
+}
+
+.life-card {
+    display: inline-block;
+    width: 69px;
+    height: 22px;
+    overflow: hidden;
+    background: url("icon/watercard/t.png");
+}
+
+.music-card {
+    display: inline-block;
+    width: 69px;
+    height: 22px;
+    overflow: hidden;
+    background: url("icon/watercard/t2.png");
+}
+
+.movie-card {
+    display: inline-block;
+    width: 69px;
+    height: 22px;
+    overflow: hidden;
+    background: url("icon/watercard/t3.png");
+}
+
+.column-card {
+    display: inline-block;
+    width: 40px;
+    height: 22px;
+    overflow: hidden;
+    background: url("icon/watercard/t4.png");
+}
+
+.article-card {
+    display: inline-block;
+    width: 69px;
+    height: 22px;
+    overflow: hidden;
+    background: url("icon/watercard/t5.png");
+}
+
+.teach-card {
+    display: inline-block;
+    width: 69px;
+    height: 22px;
+    overflow: hidden;
+    background: url("icon/watercard/t6.png");
+}
+
+.science-card {
+    display: inline-block;
+    width: 86px;
+    height: 22px;
+    overflow: hidden;
+    background: url("icon/watercard/t7.png");
+}
+
+.trend-card {
+    display: inline-block;
+    width: 55px;
+    height: 22px;
+    overflow: hidden;
+    background: url("icon/watercard/t8.png");
+}
+
+.__life {
+    background: url("icon/watercard/t9.png");
+}
+
+.refresh-cards {
+    display: inline-block;
+    width: 14px;
+    height: 13px;
+    overflow: hidden;
+    vertical-align: middle;
+    background: url("icon/refresh.png") 0 -1px no-repeat;
+}
+
+/*global_voice icons*/
+#global_voice_panel .dict-icon-close {
+    float: right;
+    background: url('icon/close.png') no-repeat -48px 0;
+    display: inline-block;
+    overflow: hidden;
+    width: 20px;
+    height: 0;
+    padding-top: 20px;
+    margin: 6px 10px 0 0;
+}
+
+#global_voice_panel .dictvoice{
+    background: url('icon/start_head/sound-production-normal.png');
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    margin: 0 3px 0 17px;
+    vertical-align: middle;
+    font-size: 0;
+}
+
+#global_voice_panel .dictvoice:hover{
+    background: url('icon/start_head/sound-production-hover.png');
+}
+
+#global_voice_panel .panel-content .scroll-btn{
+    background: url("icon/global_voice/btn_right_slider_normal.png") no-repeat 0 0px;
+    width: 14px;
+    height: 17px;
+    display: inline-block;
+    margin: 0 3px 0 9px;
+    vertical-align: middle;
+    font-size: 0;
+}
+
+#global_voice_panel .panel-content .scroll-btn:hover{
+    background: url("icon/global_voice/btn_right_slider_hover.png") no-repeat 0 0px;
+}
+
+#global_voice_panel .panel-content .hide-btn .scroll-btn{
+    background: url("icon/global_voice/btn_left_slider_normal.png") no-repeat 0 0px;
+    width: 14px;
+    height: 17px;
+    display: inline-block;
+    margin: 0 3px 0 9px;
+    vertical-align: middle;
+    font-size: 0;
+}
+
+#global_voice_panel .panel-content .hide-btn .scroll-btn:hover{
+    background: url("icon/global_voice/btn_left_slider_hover.png") no-repeat 0 0px;
+}
+
+#global_voice_panel .panel-content .finger-up{
+    background: url("icon/global_voice/btn_good_normal.png") no-repeat 0 0px;
+    width: 14px;
+    height: 17px;
+    display: inline-block;
+    margin: 0 3px 0 16px;
+    vertical-align: middle;
+    font-size: 0;
+}
+
+#global_voice_panel .panel-content .finger-up:hover{
+    background: url("icon/global_voice/btn_good_hover.png") no-repeat 0 0px;
+}
+
+#global_voice_panel .panel-content .finger-down{
+    background: url("icon/global_voice/btn_bad_normal.png") no-repeat 0 4px;
+    width: 14px;
+    height: 21px;
+    display: inline-block;
+    margin: 0 3px 0 9px;
+    vertical-align: middle;
+    font-size: 0;
+}
+
+#global_voice_panel .panel-content .finger-down:hover{
+    background: url("icon/global_voice/btn_bad_hover.png") no-repeat 0 4px;
+}
+
+#global_voice_panel .panel-content .share{
+    background: url("icon/global_voice/btn_share_normal.png") no-repeat 0 0px;
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    margin: 0 3px 0 9px;
+    vertical-align: middle;
+    font-size: 0;
+}
+
+#global_voice_panel .panel-content .share:hover{
+    background: url("icon/global_voice/btn_share_hover.png") no-repeat 0 0px;
+}
+
+#global_voice_panel .panel-content .arr{
+    background: url("icon/global_voice/btn_up_normal.png") no-repeat 0 0px;
+    width: 8px;
+    height: 6px;
+    display: inline-block;
+    margin-left: 6px;
+}
+
+#global_voice_panel .panel-content .hide-list .arr{
+    background: url("icon/global_voice/btn_xiala_normal.png") no-repeat 0 0px;
+    width: 8px;
+    height: 6px;
+    display: inline-block;
+    margin-left: 6px;
+}
+
+#global_voice_panel .panel-content .arr{
+    background: url("icon/global_voice/btn_up_normal.png") no-repeat 0 0px;
+    width: 8px;
+    height: 6px;
+    display: inline-block;
+    margin-left: 6px;
+}
+
+#global_voice_panel .panel-content .foot_source{
+    width: 190px;
+    float: right;
+    margin-bottom: 25px;
+    background: url("icon/global_voice/logoforvo-20.png") no-repeat 120px 3px;
+    font-size: 1.1em;
+    margin-top: 22px;
+    color: #9A9A9A;
+    cursor: pointer;
+}

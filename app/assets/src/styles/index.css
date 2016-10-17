@@ -1,0 +1,219 @@
+
+#start, #startContent {
+    height: 100%;
+}
+
+#start .start-inner {
+    height: auto;
+}
+
+#startContent {
+    overflow-y: auto;
+    padding: 0 22px;
+}
+
+#start .start-inner {
+    box-sizing: border-box;
+    left: 4px;
+    margin: 17px auto 0 auto;
+    position: relative;
+}
+
+/*瀑布里的水 必须有宽度 必须是绝对定位*/
+.water-card {
+    background-color: #fff;
+    width: 130px;
+    position: absolute;
+    border: 2px solid #e8e8e8;
+    box-shadow: 0 0 3px 0 #e6e6e6;
+}
+
+.water-card:hover {
+    border: 2px solid #accadf;
+}
+
+.start-content .start-bg {
+    position: absolute;
+    top: 120px;
+    height: 100%;
+    z-index: -1;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.information-content {
+    margin: 0 auto;
+    font-family: "WenQuanYi Micro Hei", "Source Han Sans SC Normal", Tahoma, Arial;
+    position: relative;
+}
+
+.info-ads-link {
+    font-family: "WenQuanYi Micro Hei", "Source Han Sans SC Normal", Tahoma, Arial;
+}
+
+.information-stream {
+    background-color: #f2f2f2;
+    margin-top: 10px;
+}
+
+.information-stream .info-xuetang {
+}
+
+.info-ads-link .ads-list li p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 18px;
+    margin-top: 0;
+}
+
+.startpage-type-ads .indexpage-ads-swf {
+    position: relative;
+    width: 674px;
+    height: 184px;
+    background: #434343;
+}
+
+.startpage-type-ads .indexpage-ads-swf > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.everyDayEnglish {
+    box-sizing: border-box;
+    left: 4px;
+    margin: 0 auto;
+    position: relative;
+    font-family: "WenQuanYi Micro Hei", "Source Han Sans SC Normal", Tahoma, Arial;
+    height: 169px;
+    border: 1px solid #e8e8e8;
+    box-shadow: 0 0 1px 0 #ddd;
+}
+
+.everydayDataShowing {
+    padding: 0 10px 0 18px;
+}
+
+#start .information-stream .info-ads-link {
+    margin-left: 83px;
+    right: 0;
+    top: 0;
+}
+
+#start .information-content .info-ads-link {
+    z-index: 1;
+    margin: 0;
+    right: 5px;
+}
+
+#start .info-ads-link {
+    position: absolute;
+    display: none;
+
+}
+
+/*信息流中的提示*/
+.info-tip {
+    display: none;
+}
+
+.loading .data-fetching-tip {
+    display: block;
+}
+
+.everydayDataShowing .info-tip .info-icon {
+    background-color: #bbb;
+}
+
+.everydayDataShowing .info-tip .col2 {
+    line-height: 27px;
+    padding-left: 30px;
+    background-repeat: no-repeat;
+    background-position: 0 2px;
+}
+
+.everydayDataShowing .connect .col2 {
+    background-image: url(icon/info_stream/connect.png);
+}
+
+.everydayDataShowing .noconnect .col2 {
+    background-image: url(icon/info_stream/nodata.png);
+}
+
+.changing-over {
+    position: absolute;
+    right: 9px;
+    top: 77px;
+    display: none;
+}
+
+.changing-over a {
+    border-top: 3px solid #F2F2F2;
+    border-bottom: 1px solid #E3E3E3;
+    height: 0;
+    display: inline-block;
+    width: 48px;
+    margin-left: -3px;
+}
+
+.changing-over a.active {
+    border-top: 4px solid #64BBF4;
+    position: relative;
+    top: 0;
+}
+
+.changing-over:hover a {
+    border-top: 5px solid #F2F2F2;
+}
+
+.changing-over:hover a.active {
+    border-top: 8px solid #64BBF4;
+}
+
+.close-indexhead-ads {
+    position: absolute;
+    top: -22px;
+    left: 12px;
+    opacity: 0.8;
+    display: none;
+}
+
+.everyDayEnglish, .start-inner {
+    max-width: 790px;
+    min-width: 472px;
+}
+
+.small .headpic {
+    width: 281px;
+}
+
+.small .startpage-type-word .info-list {
+    font-size: 12px;
+}
+
+.small .startpage-type-word .info-list .list1 {
+    font-size: 12px;
+}
+
+.no-more-data {
+    width: 200px;
+    height: 30px;
+    margin: 20px auto;
+    text-align: center;
+    display: none;
+}
+
+.no-more-data a {
+    color: #98CAF0;
+}
+
+#start .go-top {
+    bottom: 15px;
+}
+
+.loading {
+    text-align: center;
+}

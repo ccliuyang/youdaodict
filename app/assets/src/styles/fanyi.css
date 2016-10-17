@@ -1,0 +1,481 @@
+/**
+ * 翻译模块样式
+ * @author zhulin
+ * @date  2013.04.18
+ * @notes  两栏/两行 两种布局
+ */
+
+/*基础样式
+=========================*/
+#trans.translation{
+    left: 15px;
+    width: -webkit-calc(100% - 30px);
+    height: -webkit-calc(100% - 5px);
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.4);
+}
+.translation .container{
+    padding: 20px 10px;
+    height: -webkit-calc(100% - 40px);
+    position: relative;
+}
+.translation .mod{
+    position: relative;
+}
+.translation .mod h4{
+    color: #999;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: left;
+    margin-left: 1em;
+    cursor: default;
+}
+.translation .mod .edit-mod{
+    max-height: -webkit-calc(100% - 26px);
+    overflow-y: auto;
+    margin: 1em 5px 1em 1em;
+    font-size: 1em;
+    line-height: 24px;
+    text-align: justify;
+    padding-right: 10px;
+    box-sizing: border-box;
+    min-height: 70%;
+    position: relative;
+}
+.translation .translation-mod .edit-mod {
+    max-height: -webkit-calc(100% - 80px);
+}
+.translation .layout-vertical .edit{
+    max-height: -webkit-calc(100% - 80px);
+}
+.translation .mod .btn-group{
+    position: absolute;
+}
+.translation .mod .btn-group .button{
+    float:left;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    font-size: 1em;
+    height: 30px;
+    line-height: 29px;
+    padding: 0 1em;
+}
+.translation .mod .btn-group .button:first-child{
+    margin-left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: "WenQuanYi Micro Hei", "Source Han Sans SC Normal", Tahoma, Arial;
+}
+.translation .translation-mod .btn-group .button{
+    background-color: #f7f7f7;
+    border: 1px solid #e0e0e0;
+    color: #d9d9d9;
+    pointer-events: none;
+}
+.translation .original-mod .btn-group .button,
+.translation .got-text .btn-group .button{
+    background-color: #efefef;
+    border: 1px solid #cdcdcd;
+    color: #666;
+    pointer-events: all;
+}
+.translation .has-text .btn-group #simiButton{
+    background-color: #f7f7f7;
+    border: 1px solid #cdcdcd;
+    color: #666;
+    pointer-events: all;
+}
+.translation .got-text.edited .btn-group #lineButton{
+    background-color: #efefef;
+    border: 1px solid #e0e0e0;
+    color: #d8d8d8;
+    pointer-events: none;
+}
+.translation .mod .btn-group .strong-btn{
+    background-color: #229cef;
+    color: #fff;
+    text-shadow: 1px 1px 2px #017abc;
+    border:1px solid #229cef;
+    font-weight: bold;
+    padding: 0 20px;
+}
+.translation .mod .btn-group .lang-option{
+    background-color: #efefef;
+    border:1px solid #028cd7;
+    color: #219bee;
+    font-weight: bold;
+    text-align: left;
+    text-shadow: 1px 1px 2px #fff;
+}
+.translation .mod .btn-group .lang-option:after{
+    content: "▼";
+    position: absolute;
+    right: 1em;
+}
+/*下拉菜单 select*/
+.select-mod{
+    width: -webkit-calc(95% - 125px);
+    top: 32px;
+    min-width: 220px;
+}
+/*按钮三态
+=======================================*/
+.translation .original-mod .btn-group .button:hover,
+.translation .got-text .btn-group .button:hover,
+.translation .has-text .btn-group #simiButton:hover{
+    background-color: #efefef;
+    color: #219bee;
+    border:1px solid #62baf4;
+    z-index: 2;
+}
+.translation .original-mod .btn-group .button:active,
+.translation .got-text .btn-group .button:active{
+    background-color: #d9d9d9;
+    border-color: #666;
+    color: #666;
+}
+.translation .original-mod .btn-group .strong-btn:hover,
+.translation .got-text .btn-group .strong-btn:hover{
+    background-color: #62baf4;
+    color: #fff;
+}
+.translation .original-mod .btn-group .strong-btn:active,
+.translation .got-text .btn-group .strong-btn:active{
+    background-color: #d9d9d9;
+    border-color: #666;
+    text-shadow: none;
+    color: #666;
+}
+/*语种选择按钮自适应长度*/
+.translation .original-mod .btn-group{
+    width: 100%;
+}
+.translation .original-mod .btn-group .lang-option{
+    width: -webkit-calc(95% - 236px);
+}
+/*初始化时译文内清空按钮隐藏*/
+.translation .translation-mod .btn-group .clear{
+    display: none;
+}
+.open.translation .translation-mod .btn-group .clear{
+    display: inline-block;
+}
+/*toggle按钮*/
+.translation .nav-button {
+    height: 206px;
+    width: 22px;
+    background: url(icon/collapse.png) 0 0 no-repeat;
+    display: block;
+    position: absolute;
+    cursor: pointer;
+}
+.translation .layout-horizontal .nav-button span{
+    top: 42%;
+    left: 11%;
+}
+.open.translation .nav-button span{
+    -webkit-transform: rotateZ(0);
+}
+/*收起原文控制*/
+.translation{
+    overflow: hidden;
+}
+.translation .mod,.translation .mod h4{
+    transition:.2s;
+}
+.translation .layout-horizontal  .original-mod h4{
+    padding-bottom: 6px;
+}
+.translation .layout-horizontal .translation-mod h4{
+    padding-top: 18px;
+}
+.open.translation nav {
+    width: 0;
+    overflow: hidden;
+}
+.open.translation .nav-button {
+    margin-left: 0;
+}
+.open.translation .layout-vertical .translation-mod{
+    border:none;
+}
+.open.translation .layout-vertical .original-mod{
+    margin-left: -100%;
+    opacity: 0;
+}
+.open.translation .layout-horizontal .original-mod{
+    height: 0;
+}
+.open.translation .layout-horizontal .original-mod h4{
+    margin-top: -20px;
+    opacity: 0;
+}
+.open.translation .layout-horizontal .original-mod .btn-group{
+    opacity: 0;
+}
+.open.translation .layout-horizontal .translation-mod .btn-group{
+    top: -1em;
+    right: 7em;
+    border: none;
+}
+.open.translation .layout-horizontal .btn-group:before{
+    opacity: 0;
+}
+.open.translation .layout-horizontal .translation-mod{
+    margin-top: 20px;
+    height: 100%;
+}
+/*布局 horizontal 两行
+========================*/
+.translation .layout-horizontal .nav-button{
+    top: 0;
+    -webkit-transform: rotateZ(90deg);
+    top: -95px;
+    left: 50%;
+    margin-left: -11px;
+    z-index: 100;
+}
+.translation .layout-horizontal .mod{
+    height: -webkit-calc((100% - 75px)/2);
+}
+.translation .layout-horizontal .original-mod .btn-group{
+    width: -webkit-calc(100% - 280px);
+    bottom: -73px;
+    right: 258px;
+    border-bottom: 1px solid #e6e6e6;
+    padding-bottom: 1em;
+    padding-right: 6px;
+    transition: .3s width;
+}
+.translation .layout-horizontal .translation-mod .btn-group{
+    top: -41px;
+    right: 1em;
+    border-top: 1px solid #e6e6e6;
+    padding-top: 1em;
+    padding-left: 1em;
+}
+.translation .layout-horizontal .translation-mod .btn-group:before{
+    content: "";
+    display: inline-block;
+    height: 45px;
+    width: 1px;
+    background-color: #e6e6e6;
+    position: absolute;
+    left: -6px;
+    top: -2px;
+    -webkit-transform: rotateZ(15deg);
+}
+.translation .layout-horizontal .translation-mod{
+    margin-top: 70px;
+}
+/*布局 vertical 两栏
+========================*/
+.translation .layout-vertical .nav-button{
+    top: 50%;
+    margin-top: -120px;
+    left:-3px;
+    z-index: 1000;
+}
+.translation .layout-vertical{
+    display: -webkit-box;
+}
+.translation .layout-vertical .mod{
+    -webkit-box-flex: 2;
+    height: 100%;
+    width: 50%;
+}
+.translation .layout-vertical .mod .btn-group{
+    bottom: 0;
+}
+.translation .layout-vertical .translation-mod{
+    /*border-left: 1px solid #e6e6e6;*/
+    margin-top: 0;
+}
+.open.translation .layout-vertical .translation-mod{
+    border-left: none;
+}
+.translation .layout-vertical .translation-mod .btn-group{
+    right: 10px;
+}
+.translation .layout-vertical .original-mod .select-mod{
+    top:-108px;
+    width: -webkit-calc(95% - 120px);
+}
+/*高亮句子*/
+.translation .highLight{
+    color: #35a1d4 !important;
+}
+.translation .inactive{
+    color: #434343;
+    background: #eee;
+}
+/*词典结果*/
+.dict-result{
+    color: #333;
+    max-height: 55%;
+    margin-top:20px;
+}
+.layout-vertical .dict-result{
+
+}
+.dict-result span{
+    color: #999;
+}
+.dict-result a{
+    color: #219bee;
+}
+/*翻译icon
+=================================================*/
+/*切换布局的按钮*/
+.mod-switch-btns{
+    position: absolute;
+    top: 2em;
+    right: 1.5em;
+    height: 24px;
+    width: 56px;
+    z-index: 1000;
+}
+.mod-switch-btns span{
+    display: inline-block;
+    height: 24px;
+    width: 28px;
+}
+.mod-switch-btns span{
+    background-image: url(icon/mod-switch-btns.png);
+}
+.layout-vertical .mod-switch-btns .ver-mod{
+    background-position: 0 0;
+}
+.layout-vertical .mod-switch-btns .hor-mod{
+    background-position: -28px 0;
+}
+.layout-horizontal .mod-switch-btns .ver-mod{
+    background-position: 0 -24px;
+}
+.layout-horizontal .mod-switch-btns .hor-mod{
+    background-position: -28px -24px;
+}
+.mod-switch-btns .ver-mod:hover{
+    background-position: 0 -48px;
+}
+.mod-switch-btns .hor-mod:hover{
+    background-position: -28px -48px
+}
+/*语种选择下拉框更改为两列*/
+.select-mod li{
+    width: 25%;
+    float: left;
+    padding: 0;
+    text-indent: 0.5em;
+}
+.select-mod li:first-child{
+    width: 100%;
+}
+/*断网状态*/
+.translation .net-error{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    margin-left: -200px;
+    margin-top: -50px;
+    height: 100px;
+}
+.noconnetion-img{
+    display: inline-block;
+    height: 99px;
+    width: 143px;
+    background: url(icon/netError.png) 0 0 no-repeat;
+    vertical-align: middle;
+}
+.noconnection-text{
+    display: inline-block;
+    vertical-align: 0px;
+    width: 240px;
+}
+.noconnection-text p{
+    font-size: 12px;
+}
+/*veritical 布局下的error*/
+.layout-vertical  .net-error{
+    left: 50%;
+    width: 200px;
+    margin-left: -100px;
+}
+.layout-vertical .noconnection-text{
+    display: block;
+    width: 210px;
+}
+.layout-vertical .noconnetion-img{
+    display:block;
+}
+/*double show*/
+.translation .edit-mod .content p{
+    color: #333;
+}
+.translation .edit-mod .content .copied{
+    color: #666;
+}
+/*翻译中*/
+.translation .in-progress{
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+    margin-left: -22.5px;
+    margin-top: -32.5px;
+    display: none;
+}
+.translation .in-progress .in-progress-pic{
+    height: 35px;
+
+    width: 35px;
+    background: url(icon/spoken/waiting.gif);
+}
+.translation .in-progress p{
+    width: 45px;
+
+    color: #bbb5a9;
+    font-size: 12px;
+    margin-top: 6px;
+}
+
+
+/*BUG FIX: webkit 渲染错误导致的中央竖线消失-使用div代替border属性*/
+.translation .column-border{
+    width: 1px;
+    display: block;
+    height: 100%;
+    background: #E6E5E6;
+}
+.translation .layout-horizontal .column-border{
+    display: none;
+}
+.open.translation .column-border{
+    display:none;
+}
+
+
+@media (max-width: 665px) {
+    .translation .translation-mod .btn-group .button{
+        padding: 0 .5em;
+    }
+    .translation .original-mod .btn-group .button:first-child{
+        width: -webkit-calc(100% - 200px);
+        min-width: 70px;
+
+    }
+    .translation .original-mod .btn-group .button{
+        padding: 0 .5em;
+    }
+    .translation .layout-horizontal .original-mod .btn-group{
+        width: -webkit-calc(100% - 240px);
+        right: 220px;
+
+    }
+    .translation .layout-vertical.original-mod .btn-group .lang-option{
+           width:-webkit-calc(100% - 230px);
+    }
+}

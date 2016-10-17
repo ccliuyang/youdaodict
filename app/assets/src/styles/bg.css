@@ -1,0 +1,685 @@
+/**
+ * icon 图片汇总
+ * @author:zhulin;
+ * @date: 2013-4-3;
+ */
+/** ==Global layout ==**/
+/*@logo and login
+----------------------------------------------------*/
+.dict_icon_logo {
+    background: url('icon/logo.png') no-repeat;
+}
+
+.dict_icon_login {
+    background: url('icon/dict_login.png') no-repeat;
+}
+
+.dict_icon_login:hover {
+    background-position: -36px 0;
+}
+
+.dict_icon_min, .dict_icon_max, .dict_icon_close {
+    background: url('icon/close.png') no-repeat;
+}
+
+.dict_icon_mini {
+    background: url('icon/cpp_mini.png') no-repeat;
+}
+
+.dict_icon_min {
+    background-position: 0 -5px;
+}
+
+.dict_icon_min:hover {
+    background-position: 0 -29px;
+}
+
+.dict_icon_max {
+    background-position: -22px -49px;
+}
+
+.dict_icon_max:hover {
+    background-position: -44px -49px;
+}
+
+.dict_icon_max.reset {
+    background-position: -23px -1px;
+}
+
+.dict_icon_max.reset:hover {
+    background-position: -23px -25px;
+}
+
+.dict_icon_close {
+    background-position: -44px -2px;
+}
+
+.dict_icon_close:hover {
+    background-position: -44px -26px;
+}
+
+.dict_icon_mini {
+    background-position: 0 5px;
+}
+
+.dict_icon_mini:hover {
+    background-position: 0 -19px;
+}
+
+/*@Language select btn
+-------------------------------------------------------*/
+.dict-icon-lang, .lang-eng {
+    background: url('icon/languageSelect/lang-eng.png') no-repeat 0 0;
+}
+
+.dict-icon-lang-short {
+    background: url('icon/languageSelect/langshort.png') no-repeat 0 0;
+    width: 20px;
+    height: 43px;
+}
+
+.lang-fr {
+    background: url('icon/languageSelect/lang-fr.png') no-repeat 0 0;
+}
+
+.lang-jap {
+    background: url('icon/languageSelect/lang-jap.png') no-repeat 0 0;
+}
+
+.lang-ko {
+    background: url('icon/languageSelect/lang-ko.png') no-repeat 0 0;
+}
+
+.le-eng .bar {
+    background: url('icon/languageSelect/le-eng.png') no-repeat 0 2px;
+}
+
+.le-eng.on:hover .bar, .le-eng:focus .bar {
+    background-position: 0 -33px;
+}
+
+.le-jap .bar {
+    background: url('icon/languageSelect/le-jap.png') no-repeat -2px 1px;
+}
+
+.le-jap.on:hover .bar, .le-jap:focus .bar {
+    background-position: -2px -32px;
+}
+
+.le-fr .bar {
+    background: url('icon/languageSelect/le-fr.png') no-repeat 0 0;
+}
+
+.le-fr.on:hover .bar, .le-fr:focus .bar {
+    background-position: 0 -31px;
+}
+
+.le-ko .bar {
+    background: url('icon/languageSelect/le-ko.png') no-repeat -1px 0;
+}
+
+.le-ko.on:hover .bar, .le-ko:focus .bar {
+    background-position: -1px -31px;
+}
+
+/*@search bar 前后导航
+---------------------------------------------------*/
+.pager .pre a, .pager .next a {
+    background: url('icon/pagination.png') no-repeat 0 0;
+}
+
+.pager .pre a {
+    background-position: 13px -74px;
+}
+
+.pager .next a {
+    background-position: -28px -74px;
+}
+
+.pager .pre.active a {
+    background-position: 13px 15px;
+}
+
+.pager .pre.active a:hover {
+    background-position: 13px -32px;
+}
+
+.pager .next.active a {
+    background-position: -28px 15px;
+}
+
+.pager .next.active a:hover {
+    background-position: -28px -32px;
+}
+
+/*@search 查询相关
+---------------------------------------------------*/
+.dict-icon-search {
+    background: url('icon/search_short.png') no-repeat 0 0;
+}
+
+.dict-icon-search:hover {
+    background-position: 0 -56px;
+}
+
+.js__trans .dict-icon-search,
+.js__example .dict-icon-search,
+.js__baikeDetail .dict-icon-search {
+    background: url('icon/search.png') no-repeat 0 0;
+}
+
+.js__trans .dict-icon-search:hover,
+.js__example .dict-icon-search:hover,
+.js__baikeDetail .dict-icon-search:hover {
+    background-position: 0 -56px;
+}
+
+/*.dict-icon-feedback {*/
+/*background: url('icon/feed-back.png') no-repeat 0 0;*/
+/*}*/
+
+/*.dict-icon-feedback:hover {*/
+/*background-position: -27px 0;*/
+/*}*/
+
+.dict-icon-handwrite {
+    background: url('icon/handWrite.png') 0 0;
+}
+
+.dict-icon-handwrite:hover, .js-handwrite-on {
+    background-position: 0 -33px;
+}
+
+.dict-icon-search-down {
+    background: url('icon/searchDown.png') 0 0;
+}
+
+.dict-icon-search-down {
+    background: url('icon/searchDown.png') 0 0;
+}
+
+.set-word .status.active {
+    background-position: 0 -1px;
+}
+
+.set-word .status {
+    background: url("icon/word-status.png") no-repeat -24px -1px;
+}
+
+/**==module 内部通用组件==**/
+/*@component  单词本
+-------------------------------------------------------*/
+/*未添加*/
+.add-fav {
+    background: url(icon/add-wordsbook.png) 0 0 no-repeat;
+}
+
+/*
+.ec .add-fav.hidden{
+    display: none;
+}*/
+.add-fav:hover {
+    background: url(icon/add-wordsbook-hover.png) 0 0 no-repeat;
+}
+
+/*已添加*/
+.add-fav.added {
+    background: url(icon/added-wordsbook.png) 0 0 no-repeat;
+}
+
+.add-fav.added:hover {
+    background: url(icon/added-wordsbook-hover.png) 0 0 no-repeat;
+}
+
+/*@component 发音按钮
+---------------------------------------------------------*/
+.pronounce .dictvoice {
+    background: url('icon/start_head/sound-production-normal.png');
+}
+
+.pronounce .dictvoice:hover {
+    background: url('icon/start_head/sound-production-hover.png');
+}
+
+/*@componet need help icon
+-------------------------------------------------------------*/
+.need-help {
+    background: url(icon/help.png) 0 0 no-repeat;
+}
+
+/*@componet humanvoice
+-----------------------------------------------------------*/
+.humanvoice {
+    background: url(icon/humanvoice.png) 0 0 no-repeat;
+}
+
+.humanvoice:hover {
+    background-position: 0 -15px;
+}
+
+/*@component more expand or pack-up
+--------------------------------------------------------------*/
+.yd_icon_more {
+    background: url(icon/show_more.png) 3px 1px no-repeat;
+}
+
+.yd_icon_more:hover {
+    background-position: -10px 1px;
+}
+
+.yd_dict_toggleClose .yd_icon_more {
+    background-position: 3px -18px;
+}
+
+.yd_dict_toggleClose .yd_icon_more:hover {
+    background-position: -10px -18px;
+}
+
+/*@component show-detail
+--------------------------------------------------------------*/
+.show-detail {
+    background: url(icon/go_detail.png) -11px 0 no-repeat;
+}
+
+.show-detail:hover {
+    background-position: -11px -15px;
+}
+
+.yd_dict_toggleClose .show-detail {
+    background: url(icon/go_detail.png) 0 0 no-repeat;
+}
+
+.yd_dict_toggleClose .show-detail:hover {
+    background-position: 0 -15px;
+}
+
+/*@global layout menu list icon
+----------------------------------------------------------*/
+.dict-icon-start:hover {
+    background-image: url(icon/global_menu/Main-Menu-normal.png);
+}
+
+.dict-icon-wordbook {
+    background-image: url(icon/global_menu/WordsBook-normal.png);
+}
+
+.dict-icon-wordbook.hl {
+    background-image: url(icon/global_menu/WordsBook-on-normal.png);
+}
+
+.dict-icon-xuetang {
+    background-image: url(icon/global_menu/youdaos-choo-normal.png);
+}
+
+.dict-icon-fanyi {
+    background-image: url(icon/global_menu/Translate-normal.png);
+}
+
+.dict-icon-tujie {
+    background-image: url(icon/global_menu/Photograph-normal.png);
+}
+
+.dict-icon-bbs {
+    background-image: url(icon/global_menu/bbs-normal.png);
+}
+
+.dict-icon-start {
+    background-image: url(icon/global_menu/Main-Menu-hover.png);
+}
+
+.dict-icon-wordbook:hover {
+    background-image: url(icon/global_menu/WordsBook-hover.png);
+}
+
+.dict-icon-wordbook.hl:hover {
+    background-image: url(icon/global_menu/WordsBook-on-hover.png);
+}
+
+.dict-icon-xuetang:hover {
+    background-image: url(icon/global_menu/youdaos-choo-hover.png);
+}
+
+.dict-icon-fanyi:hover {
+    background-image: url(icon/global_menu/Translate-hover.png);
+}
+
+.dict-icon-tujie:hover {
+    background-image: url(icon/global_menu/Photograph-hover.png);
+}
+
+.dict-icon-bbs:hover {
+    background-image: url(icon/global_menu/bbs-hover.png);
+}
+
+.global-setting .menu .dict-icon-wordbook.hl{
+    background-position: 12px 1px;
+}
+.global-setting .menu .dict-icon-wordbook.hl:hover{
+    background-position: 12px 1px;
+}
+
+/*.dict-icon-start:active{*/
+/*background-image: url(icon/global_menu/Main-Menu-pressed.png);*/
+/*}*/
+/*.dict-icon-wordbook:active{*/
+/*background-image: url(icon/global_menu/WordsBook-pressed.png);*/
+/*}*/
+/*.dict-icon-wordbook.hl:active{*/
+/*background-image: url(icon/global_menu/WordsBook-on-pressed.png);*/
+/*}*/
+/*.dict-icon-xuetang:active{*/
+/*background-image: url(icon/global_menu/youdaos-choo-pressed.png);*/
+/*}*/
+/*.dict-icon-fanyi:active {*/
+/*background-image: url(icon/global_menu/Translate-pressed.png);*/
+/*}*/
+/*.dict-icon-tujie:active{*/
+/*background-image: url(icon/global_menu/Photograph-pressed.png);*/
+/*}*/
+/*.dict-icon-mini:active{*/
+/*background-image: url(icon/global_menu/miniwindow-pressed.png);*/
+/*}*/
+/*mainMenu 小图标*/
+.main-menu .has-submenu {
+    background: transparent url(icon/menu-moreop.png) 90% 50% no-repeat;
+}
+
+.main-menu .has-submenu.current {
+    background: #179ff4 url(icon/menu-moreop-hover.png) 90% 50% no-repeat;
+}
+
+.main-menu .topmost {
+    background-image: url(icon/mainMenu/topmost.png);
+}
+
+.main-menu .topmost.cur {
+    background-image: url(icon/mainMenu/topmost-cur.png);
+}
+
+.main-menu .current>.topmost {
+    background-image: url(icon/mainMenu/topmost-hover.png);
+}
+
+.main-menu .current>.topmost.cur {
+    background-image: url(icon/mainMenu/topmost-cur-hover.png);
+}
+
+.main-menu .f-size {
+    background-image: url(icon/mainMenu/f-size.png);
+}
+
+.main-menu .current>.f-size {
+    background-image: url(icon/mainMenu/f-size-hover.png);
+}
+
+.main-menu .set {
+    background-image: url(icon/mainMenu/set.png);
+}
+
+.main-menu .current>.set {
+    background-image: url(icon/mainMenu/set-hover.png);
+}
+
+.main-menu .options {
+    background-image: url(icon/mainMenu/options.png);
+}
+
+.main-menu .current>.options {
+    background-image: url(icon/mainMenu/options-hover.png);
+}
+
+.main-menu .guide {
+    background-image: url(icon/mainMenu/guide.png);
+}
+
+.main-menu .current>.guide {
+    background-image: url(icon/mainMenu/guide-hover.png);
+}
+
+.main-menu .plugins {
+    background-image: url(icon/mainMenu/plugins.png);
+}
+
+.main-menu .current>.plugins {
+    background-image: url(icon/mainMenu/plugins-hover.png);
+}
+
+.main-menu .help {
+    background-image: url(icon/mainMenu/help.png);
+}
+
+.main-menu .current>.help {
+    background-image: url(icon/mainMenu/help-hover.png);
+}
+
+.main-menu .feedback {
+    background-image: url(icon/mainMenu/feedback.png);
+}
+
+.main-menu .current>a>.feedback {
+    background-image: url(icon/mainMenu/feedback-hover.png);
+}
+
+.main-menu .updating {
+    background-image: url(icon/mainMenu/updating.png);
+}
+
+.main-menu .current>.updating {
+    background-image: url(icon/mainMenu/updating-hover.png);
+}
+
+.main-menu .help-online {
+    background-image: url(icon/mainMenu/help-online.png);
+}
+
+.main-menu .current>a>.help-online {
+    background-image: url(icon/mainMenu/help-online-hover.png);
+}
+
+.main-menu .about {
+    background-image: url(icon/mainMenu/about.png);
+}
+
+.main-menu .current>.about {
+    background-image: url(icon/mainMenu/about-hover.png);
+}
+
+.main-menu .login {
+    background-image: url(icon/mainMenu/login.png);
+}
+
+.main-menu .current>.login {
+    background-image: url(icon/mainMenu/login-hover.png);
+}
+
+.main-menu .logout {
+    background-image: url(icon/mainMenu/logout.png);
+}
+
+.main-menu .current>.logout {
+    background-image: url(icon/mainMenu/logout-hover.png);
+}
+
+.main-menu .exit {
+    background-image: url(icon/mainMenu/exit.png);
+}
+
+.main-menu .current>.exit {
+    background-image: url(icon/mainMenu/exit-hover.png);
+}
+
+.main-menu .cur-fz {
+    background-image: url(icon/mainMenu/cur-fz.png);
+}
+
+.main-menu .current>.cur-fz {
+    background-image: url(icon/mainMenu/cur-fz-hover.png);
+}
+
+/*@component history
+-------------------------------------*/
+.history span {
+    background-image: url(icon/history.png);
+    background-repeat: no-repeat;
+}
+
+.history .del {
+    background-position: 7px 7px;
+}
+
+.history .del:hover {
+    background-position: -32px 7px;
+}
+
+.history .control .prev {
+    background-position: 5px -56px;
+}
+
+.history .control .prev:hover {
+    background-position: 5px -26px;
+}
+
+.history .control .current {
+    background-position: 0 0;
+}
+
+.history .control .next {
+    background-position: -30px -56px;
+}
+
+.history .control .next:hover {
+    background-position: -30px -84px;
+}
+
+.history .control .clear {
+    background-position: -32px -109px;
+}
+
+.history .control .clear:hover {
+    background-position: 7px -109px;
+}
+
+.history .prev.dis {
+    background-position: 5px -84px;
+}
+
+.history .prev.dis:hover {
+    background-position: 5px -84px;
+}
+
+.history .next.dis {
+    background-position: -30px -26px;
+}
+
+.history .next.dis:hover {
+    background-position: -30px -26px;
+}
+
+/*速查结果中的回车小按钮
+-----------------------------------*/
+.quick .enter-tips .enter-icon {
+    background: url(icon/enter.png) no-repeat 0 0;
+}
+
+/*断网*/
+.offline {
+    background: url('icon/offline.png') 0 0 no-repeat;
+}
+
+/*信息流中的style图标*/
+.style-activites {
+    background: url('icon/info_stream/activites.png') 0 3px no-repeat;
+}
+
+.style-article {
+    background: url('icon/info_stream/article.png') 0 3px no-repeat;
+}
+
+.style-bilingual {
+    background: url('icon/info_stream/bilingual.png') 0 3px no-repeat;
+}
+
+.style-card {
+    background: url('icon/info_stream/card.png') 0 3px no-repeat;
+}
+
+.style-huihui {
+    background: url('icon/info_stream/huihui.png') 0 3px no-repeat;
+}
+
+.style-joke {
+    background: url('icon/info_stream/joke.png') 0 3px no-repeat;
+}
+
+.style-media {
+    background: url('icon/info_stream/media.png') 0 3px no-repeat;
+}
+
+.style-micro, .style-daily {
+    background: url('icon/info_stream/micro.png') 0 3px no-repeat;
+}
+
+.style-news {
+    background: url('icon/info_stream/news.png') 0 3px no-repeat;
+}
+
+.style-oral-practice {
+    background: url('icon/info_stream/oral-practice.png') 0 3px no-repeat;
+}
+
+.style-other {
+    background: url('icon/info_stream/other.png') 0 3px no-repeat;
+}
+
+.style-oral-overseas {
+    background: url('icon/info_stream/overseas.png') 0 3px no-repeat;
+}
+
+/*首页头部跟读分享模块*/
+.everyDayEnglish .spoken-record {
+    background: url('icon/start_head/read-after-normal.png');
+}
+
+.everyDayEnglish .spoken-record:hover {
+    background: url('icon/start_head/read-after-hover.png');
+}
+
+.everyDayEnglish .share {
+    background: url('icon/start_head/share-normal.png');
+}
+
+.everyDayEnglish .share:hover {
+    background: url('icon/start_head/share-hover.png');
+}
+
+/*跟读通用*/
+.spoken-record {
+    background: url('icon/start_head/read-after-normal.png');
+}
+
+.spoken-record:hover {
+    background: url('icon/start_head/read-after-hover.png');
+}
+
+.global-voice-icon {
+    background: url('icon/global_voice/icon_f_voice_normal.png') no-repeat;
+}
+
+.global-voice-icon:hover {
+    background: url('icon/global_voice/icon_f_voice_pressed.png') no-repeat;
+}
+
+/*顶部搜索按钮*/
+.go-to-search {
+    background: url('icon/gotosearch.png');
+}
+
+/*关闭图片词典*/
+.close-img {
+    background: url('icon/close_pic_dict.png') no-repeat 0 0;
+}
+
+/*关闭起始页头部广告*/
+.close-indexhead-ads{
+    background: url('icon/everyDayEnglish/close-head-ads.png') no-repeat 0 0;
+}

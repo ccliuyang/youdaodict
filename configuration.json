@@ -1,0 +1,5 @@
+{
+  "useTranslateModule": "true",
+  "savePath": "/home/ubuntu/Desktop",
+  "cmd": "translate -f en -t zh "
+}

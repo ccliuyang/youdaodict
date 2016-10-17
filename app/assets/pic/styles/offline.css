@@ -1,0 +1,34 @@
+body {
+    margin: 0 auto;
+    width: 900px;
+}
+
+.offline-body {
+    margin: 212px 0 0 139px;
+    width: 622px;
+}
+
+.offline-icon {
+    background: url("icon/offline.png") 0 0 no-repeat;
+    float: left;
+    height: 157px;
+    margin-right: 10px;
+    width: 216px;
+}
+
+.offline-info {
+    line-height: 157px;
+    height: 157px;
+}
+
+.reload {
+    background-color: #199EF3;
+    color: #FFFFFF;
+    float: right;
+    font: 14px "Song";
+    font-weight: bold;
+    line-height: 40px;
+    height: 40px;
+    text-align: center;
+    width: 127px;
+}
