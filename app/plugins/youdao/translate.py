@@ -48,8 +48,10 @@ def useTranslateComponent(text):
     import os
     from dae.utils import get_conf
     conf = get_conf()
-    cmd = conf['cmd']
-    translation = os.popen(cmd + " '" + text + "'").readlines()[0]
+    toLang = conf['toLang']
+    # translation = os.popen(cmd + " '" + text + "'").readlines()[0]
+    from mtranslate import translate
+    translation = translate(text,toLang)
     return translation
 
 class YoudaoTranslate(QtCore.QObject):
@@ -102,51 +104,38 @@ class YoudaoTranslate(QtCore.QObject):
         data = { "keyfrom" : "deskdict.linux", "q" : text.encode("utf-8"), "doctype" : "xml", "xmlVersion" : 8.2,
                  "client" : const.client, "id" : "cee84504d9984f1b2", "vendor": "deskdict.linux",
                  "in" : "YoudaoDict", "appVer" : "5.4.46.5554", "appZengqiang" : 0, "le" : "eng", "LTH" : 40}
-        # self.clear_translate()
-        # try:
-        ret = requests.get("http://dict.youdao.com/search", params=data).text
-        ret = ret.encode('utf-8')
-        pq = PyQuery(ret, parser="xml")
-        test_data = {"q": text, "type": 1, "pos": -1, "client": const.client}
-        test_ret = json.loads(requests.get("http://dict.youdao.com/jsonresult", params=test_data).text)
-        #
-        self.translate_info.text = text
-        text = str(text).replace('\n',' ')
-        from dae.utils import get_conf
-        conf = get_conf()
-        self.translate_info.webtrans = "谷歌翻译:\n"
+        self.clear_translate()
+        try:
+            ret = requests.get("http://dict.youdao.com/search", params=data).text
+            ret = ret.encode('utf-8')
+            pq = PyQuery(ret, parser="xml")
+            test_data = {"q": text, "type": 1, "pos": -1, "client": const.client}
+            test_ret = json.loads(requests.get("http://dict.youdao.com/jsonresult", params=test_data).text)
 
-        if (str(conf['useTranslateModule']).upper() == 'TRUE' ):
-            self.translate_info.webtrans = self.translate_info.webtrans + useTranslateComponent(text) + "\n"
-        # if self.translate_info.webtrans:
-        self.translate_info.webtrans =self.translate_info.webtrans + "有道:\n"
-        self.translate_info.trans = '\n'.join([PyQuery(l)("i").text() for l in pq('trs l')])
-        #self.translate_info.phonetic = test_ret.get("ussm", "")
-        self.translate_info.webtrans = self.translate_info.webtrans + self.wrap_web_trans(pq)
-        #     with open('/home/ubuntu/Desktop/translate.txt', 'a') as f:
-        #         f.write('\ntext :'+ text + '\n' + 'translate: ' + self.translate_info.webtrans)
-        #         f.close()
-        #     self.translate_info.lang = test_ret.get("lang", "")
-        #
-        # except:
-        #     with open_offline_dict() as obj:
-        #         ret = obj.query(text)
-        #         if ret:
-        #             self.translate_info.text = text
-        #             self.translate_info.trans = ret[1].replace("\\n", "\n")
-        #             self.translate_info.phonetic = ret[0][1:-1]
-        #             self.translate_info.webtrans = "抱歉，从网络获取结果失败，请检测网络重试"
-        #             self.translate_info.lang = "eng"
-        # self.translate_info.voices = get_voice_simple(text)
-        # if not text:
-        #     return
-        #self.clear_translate()
+            self.translate_info.text = text
+            text = str(text).replace('\n',' ')
+            from dae.utils import get_conf
+            conf = get_conf()
+            self.translate_info.webtrans = "谷歌翻译: \n"
 
-        #self.translate_info.text = text
+            if (str(conf['useTranslateModule']).upper() == 'TRUE' ):
+                self.translate_info.webtrans = self.translate_info.webtrans + useTranslateComponent(text) + "\n"
+            # if self.translate_info.webtrans:
+            self.translate_info.webtrans =self.translate_info.webtrans + "有道:\n"
+            self.translate_info.trans = '\n'.join([PyQuery(l)("i").text() for l in pq('trs l')])
+            self.translate_info.phonetic = test_ret.get("ussm", "")
+            self.translate_info.webtrans = self.translate_info.webtrans + self.wrap_web_trans(pq)
+        except:
+            with open_offline_dict() as obj:
+                ret = obj.query(text)
+                if ret:
+                    self.translate_info.text = text
+                    self.translate_info.trans = ret[1].replace("\\n", "\n")
+                    self.translate_info.phonetic = ret[0][1:-1]
+                    self.translate_info.webtrans = "抱歉，从网络获取结果失败，请检测网络重试"
+                    self.translate_info.lang = "eng"
+        self.translate_info.voices = get_voice_simple(text)
 
-        # with open('/home/ubuntu/Desktop/translate.txt', 'a') as f:
-        #     f.write('\ntext :'+ text + '\n' + 'translate: ' + self.translate_info.webtrans)
-        #     f.close()
         if not self.translate_info.webtrans:
             self.translate_info.webtrans = "查询失败"
         # time.sleep(1)

@@ -194,7 +194,8 @@ Item {
                     hover_image: "images/ocr_tools/ocr_search_hover.png"
                     press_image: "images/ocr_tools/ocr_search_normal.png"
                     onClicked: {
-                        var youdao_search_url = "http://www.youdao.com/search?q=%1&client=deskdictdeepin".arg(translateInfo.text)
+                        //var youdao_search_url = "http://www.youdao.com/search?q=%1&client=deskdictdeepin".arg(translateInfo.text)
+                        var youdao_search_url = "https://www.google.com/search?q=%1".arg(translateInfo.text)
                         Qt.openUrlExternally(youdao_search_url)
                     }
                 }
