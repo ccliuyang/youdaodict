@@ -1,6 +1,6 @@
 # youdaodict
-make a little change about youdaodict. Using google translate in a popup window.
-
+make a little change about youdaodict.
+Using google translate in a popup window.
 # run this program by using this command:
 
 ``` bash
